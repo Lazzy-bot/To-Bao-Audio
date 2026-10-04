@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tổ Báo Audio · Link bio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FF4D9A; --ink:#2B0A3D; --paper:#FFF7FB; --pop:#FFE14D; --pop-ink:#2B0A3D; --line:#2B0A3D;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#2B0A3D;--ink:#FFE9F4;--paper:#42175A;--pop:#FFE14D;--pop-ink:#2B0A3D;--line:#FF4D9A}
+}
+:root[data-theme="dark"]{--bg:#2B0A3D;--ink:#FFE9F4;--paper:#42175A;--pop:#FFE14D;--pop-ink:#2B0A3D;--line:#FF4D9A}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;min-height:100vh}
+main{max-width:460px;margin:0 auto;padding:36px 20px 40px}
+.sticker{display:inline-block;background:var(--pop);color:var(--pop-ink);font:800 15px/1 "Bricolage Grotesque",system-ui,sans-serif;padding:8px 14px;border-radius:8px;transform:rotate(-4deg);border:2px solid var(--pop-ink);margin-bottom:16px}
+h1{font:800 clamp(48px,14vw,68px)/1.2 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.02em;margin:0 0 16px;padding-top:6px;text-transform:uppercase}
+h1 span{display:inline-block;background:var(--ink);color:var(--bg);padding:0 12px 4px;border-radius:10px;margin-top:2px;line-height:1.15;transform:rotate(1.5deg)}
+.lead{font-size:17px;font-weight:500;margin:0 0 8px;max-width:36ch}
+.sub{font-size:15px;margin:0 0 28px;max-width:40ch;opacity:.9}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+h2{font:800 20px/1.1 "Bricolage Grotesque",system-ui,sans-serif;margin:30px 0 12px;letter-spacing:-.01em}
+a.link{display:flex;align-items:center;gap:14px;text-decoration:none;background:var(--paper);color:var(--ink);border:2.5px solid var(--line);border-radius:16px;padding:14px 16px;font-weight:600;font-size:16px;box-shadow:4px 4px 0 var(--line);transition:transform .12s,box-shadow .12s}
+a.link small{display:block;font-weight:400;font-size:13px;opacity:.8;line-height:1.35}
+a.link:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--line)}
+a.link:active{transform:translate(4px,4px);box-shadow:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--pop);outline-offset:3px}
+.emoji{flex:none;width:44px;height:44px;border-radius:12px;background:var(--pop);color:var(--pop-ink);display:grid;place-items:center;font-size:22px;border:2px solid var(--pop-ink)}
+a.main{background:var(--pop);color:var(--pop-ink);border-color:var(--pop-ink);box-shadow:5px 5px 0 var(--pop-ink);font:800 22px/1.1 "Bricolage Grotesque",system-ui,sans-serif;padding:20px 18px;border-radius:20px}
+a.main small{font:400 14px/1.4 "Be Vietnam Pro",system-ui,sans-serif;margin-top:5px}
+a.main .emoji{background:var(--pop-ink);border-color:var(--pop-ink);width:52px;height:52px;font-size:26px}
+.gdesc{margin:-6px 0 12px;font-size:14px;opacity:.9}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;border:2px solid var(--ink);border-radius:999px;padding:7px 16px}
+.chip:hover{background:var(--ink);color:var(--bg)}
+.quote{margin:34px 0 0;padding:16px 18px;border:2.5px dashed var(--ink);border-radius:16px;font:700 18px/1.3 "Bricolage Grotesque",system-ui,sans-serif;transform:rotate(-1deg)}
+footer{margin-top:22px;display:flex;justify-content:flex-end}
+button{font:inherit;font-size:13px;font-weight:500;color:var(--ink);background:none;border:0;border-bottom:2px solid var(--ink);padding:0 0 1px;cursor:pointer}
+@media (prefers-reduced-motion:reduce){a.link{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <span class="sticker">Tin nóng mỗi ngày</span>
+  <h1>Tổ Báo <span>Audio</span></h1>
+  <p class="lead">Vào nghe truyện, ra là thánh sống bóc phốt.</p>
+  <p class="sub">Không chữa lành nhẹ nhàng đâu nha. Đây là nơi đào tạo chị em từ hiền lành thành đanh đá có học thức.</p>
+
+  <!-- Nút nghe tập mới nhất (Hero) -->
+  <ul id="hero-container">
+    <li><a class="link main" href="#"><span class="emoji" aria-hidden="true">🎧</span><span>Nghe tập mới nhất<small>Tập mới lên sóng mỗi tối</small></span></a></li>
+  </ul>
+
+  <!-- 1 Playlist duy nhất của kênh Tổ Báo Audio -->
+  <div id="sections-container">
+    <section>
+      <h2>Tổ Báo Audio</h2>
+      <p class="gdesc">Kênh chính: truyện bóc phốt, vả mặt, sài não.</p>
+      <ul>
+        <li><a class="link" href="#"><span class="emoji" aria-hidden="true">▶️</span><span>Trọn bộ Playlist<small>Bấm để nghe liền mạch toàn bộ các tập</small></span></a></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Theo dõi Tổ Báo -->
+  <section id="social-section">
+    <h2>Theo dõi Tổ Báo</h2>
+    <nav class="chips" id="social-chips" aria-label="Nền tảng">
+      <a class="chip" href="#">YouTube</a>
+      <a class="chip" href="#">Spotify</a>
+      <a class="chip" href="#">TikTok</a>
+      <a class="chip" href="#">Facebook</a>
+    </nav>
+  </section>
+
+  <p class="quote">Nghe xong chưa chắc giàu, nhưng thái độ lên hẳn một tầm! 💅</p>
+
+  <footer><button id="copy" type="button">Sao chép link</button></footer>
+</main>
+
+<script>
+// ==================================================================================
+// ⚙️ CẤU HÌNH GOOGLE SHEETS (KHI NÀO CẦN DÙNG THÌ DÁN LINK VÀO ĐÂY)
+// ==================================================================================
+const GOOGLE_SHEET_URL = ""; 
+
+// Xóa cache cũ nếu có
+localStorage.removeItem("bio_data_cache");
+localStorage.removeItem("bio_data_cache_v2");
+
+// Hàm chuẩn hóa chuỗi tiếng Việt (xóa dấu) để so sánh chính xác
+function cleanStr(s) {
+  return (s || "").trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+// Hàm chuyển đổi đường link Google Sheet sang dạng đọc CSV
+function getCsvUrl(url) {
+  if (!url) return "";
+  if (url.includes("/pub") && url.includes("output=csv")) return url;
+  const match = url.match(/\/spreadsheets\/d\/([a-zA-Z0-9-_]+)/);
+  const sheetId = match ? match[1] : (url.length > 20 && !url.includes("/") ? url : null);
+  return sheetId ? `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv` : url;
+}
+
+// Phân tích CSV
+function parseCSV(text) {
+  const lines = [];
+  let row = [""];
+  let inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    const next = text[i + 1];
+    if (c === '"') {
+      if (inQuotes && next === '"') { row[row.length - 1] += '"'; i++; }
+      else { inQuotes = !inQuotes; }
+    } else if (c === "," && !inQuotes) {
+      row.push("");
+    } else if ((c === "\r" || c === "\n") && !inQuotes) {
+      if (c === "\r" && next === "\n") i++;
+      lines.push(row);
+      row = [""];
+    } else {
+      row[row.length - 1] += c;
+    }
+  }
+  if (row.length > 1 || row[0] !== "") lines.push(row);
+  return lines;
+}
+
+// Tự động nhận diện cột
+function detectColumns(headerRow) {
+  const map = { section: 0, icon: 1, title: 2, desc: 3, url: 4 };
+  headerRow.forEach((col, idx) => {
+    const h = cleanStr(col);
+    if (h.includes("vi tri") || h.includes("muc") || h.includes("nhom") || h.includes("section")) map.section = idx;
+    else if (h.includes("icon") || h.includes("bieu tuong") || h.includes("emoji")) map.icon = idx;
+    else if (h.includes("tieu de") || h.includes("ten") || h.includes("title")) map.title = idx;
+    else if (h.includes("mo ta") || h.includes("desc") || h.includes("phu de")) map.desc = idx;
+    else if (h.includes("link") || h.includes("url") || h.includes("duong dan")) map.url = idx;
+  });
+  return map;
+}
+
+// Render lại giao diện khi có dữ liệu từ Google Sheets
+function renderBioFromData(items) {
+  const heroContainer = document.getElementById("hero-container");
+  const sectionsContainer = document.getElementById("sections-container");
+  const socialSection = document.getElementById("social-section");
+  const socialChips = document.getElementById("social-chips");
+
+  const heroes = [];
+  const socials = [];
+  const groups = {};
+
+  items.forEach(item => {
+    const s = cleanStr(item.section);
+    const isHero = s.includes("moi nhat") || s.includes("hot") || s.includes("main") || s.includes("hero");
+    const isSocial = s.includes("mang xa hoi") || s.includes("social") || s.includes("theo doi");
+
+    if (isHero) {
+      heroes.push(item);
+    } else if (isSocial) {
+      socials.push(item);
+    } else {
+      const sectionName = item.section || "Tổ Báo Audio";
+      if (!groups[sectionName]) groups[sectionName] = [];
+      groups[sectionName].push(item);
+    }
+  });
+
+  // Render Hero
+  if (heroes.length > 0) {
+    heroContainer.innerHTML = "";
+    heroes.forEach(item => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.className = "link main";
+      a.href = item.url || "#";
+      if (item.url && item.url !== "#") { a.target = "_blank"; a.rel = "noopener noreferrer"; }
+      a.innerHTML = `<span class="emoji" aria-hidden="true">${item.icon || "🎧"}</span><span>${item.title}${item.desc ? `<small>${item.desc}</small>` : ""}</span>`;
+      li.appendChild(a);
+      heroContainer.appendChild(li);
+    });
+  }
+
+  // Render Sections
+  if (Object.keys(groups).length > 0) {
+    sectionsContainer.innerHTML = "";
+    Object.keys(groups).forEach(groupName => {
+      const section = document.createElement("section");
+      section.innerHTML = `<h2>${groupName}</h2><p class="gdesc">Kênh chính: truyện bóc phốt, vả mặt, sài não.</p>`;
+      const ul = document.createElement("ul");
+      groups[groupName].forEach(item => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.className = "link";
+        a.href = item.url || "#";
+        if (item.url && item.url !== "#") { a.target = "_blank"; a.rel = "noopener noreferrer"; }
+        a.innerHTML = `<span class="emoji" aria-hidden="true">${item.icon || "🔗"}</span><span>${item.title}${item.desc ? `<small>${item.desc}</small>` : ""}</span>`;
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      section.appendChild(ul);
+      sectionsContainer.appendChild(section);
+    });
+  }
+
+  // Render Socials
+  if (socials.length > 0) {
+    socialSection.style.display = "block";
+    socialChips.innerHTML = "";
+    socials.forEach(item => {
+      const a = document.createElement("a");
+      a.className = "chip";
+      a.href = item.url || "#";
+      if (item.url && item.url !== "#") { a.target = "_blank"; a.rel = "noopener noreferrer"; }
+      a.textContent = item.title;
+      socialChips.appendChild(a);
+    });
+  }
+}
+
+// Chỉ nạp dữ liệu khi có Google Sheet URL
+async function loadGoogleSheets() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const targetUrl = urlParams.get("sheet") || GOOGLE_SHEET_URL;
+  const csvUrl = getCsvUrl(targetUrl);
+  if (!csvUrl) return;
+
+  try {
+    const res = await fetch(csvUrl);
+    if (!res.ok) return;
+    const csvText = await res.text();
+    const rows = parseCSV(csvText);
+    if (rows.length < 2) return;
+
+    const colMap = detectColumns(rows[0]);
+    const items = [];
+    for (let i = 1; i < rows.length; i++) {
+      const r = rows[i];
+      if (!r || r.length <= colMap.title) continue;
+      const title = (r[colMap.title] || "").trim();
+      if (!title) continue;
+      items.push({
+        section: (r[colMap.section] || "Tổ Báo Audio").trim(),
+        icon: (r[colMap.icon] || "🔗").trim(),
+        title: title,
+        desc: (r[colMap.desc] || "").trim(),
+        url: (r[colMap.url] || "#").trim()
+      });
+    }
+    if (items.length > 0) {
+      renderBioFromData(items);
+    }
+  } catch (e) {
+    console.warn("Chưa tải được Google Sheets:", e);
+  }
+}
+
+loadGoogleSheets();
+
+// Nút sao chép link
+document.getElementById('copy').addEventListener('click', function() {
+  var b = this;
+  try {
+    navigator.clipboard.writeText(location.href).then(function() {
+      b.textContent = 'Đã sao chép';
+      setTimeout(function() { b.textContent = 'Sao chép link'; }, 1800);
+    }, function() {
+      b.textContent = 'Không sao chép được';
+    });
+  } catch(e) {
+    b.textContent = 'Không sao chép được';
+  }
+});
+</script>
+</body>
+</html>
