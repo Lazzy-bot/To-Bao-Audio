@@ -89,13 +89,9 @@ button{font:inherit;font-size:13px;font-weight:500;color:var(--ink);background:n
 
 <script>
 // ==================================================================================
-// ⚙️ CẤU HÌNH GOOGLE SHEETS (KHI NÀO CẦN DÙNG THÌ DÁN LINK VÀO ĐÂY)
+// ⚙️ CẤU HÌNH GOOGLE SHEETS
 // ==================================================================================
-const GOOGLE_SHEET_URL = ""; 
-
-// Xóa cache cũ nếu có
-localStorage.removeItem("bio_data_cache");
-localStorage.removeItem("bio_data_cache_v2");
+const GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1N7HkhBMqnl2huv3XbdDf1WY8kIjtgtcXI02F92Ai7vk/edit?usp=sharing"; 
 
 // Hàm chuẩn hóa chuỗi tiếng Việt (xóa dấu) để so sánh chính xác
 function cleanStr(s) {
